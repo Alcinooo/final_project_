@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <link href="css/styles.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Version 1</title>
+  <!-- google fonts go here -->
+  </head>
+<body>
+
+  <form id='quiz' name = 'quiz'>
+<!-- question 1 -->
+  <div class="qa" id='one'>
+  <p id= 'question_1'>How much water should an athlete try to consume 2 hours before the game?</p>
+  <p class='response' id="response1"></p>
+<br>
+  <div class='options'>
+  <label>
+  <input type="radio" name="question_1" value="A">  2-3 Cups
+  </label>
+<br>
+  <label>
+  <input type="radio" name="question_1" value="B">  1 Cup
+  </label>
+<br>
+  <label>
+  <input type="radio" name="question_1" value="C">  A gallon
+  </label>
+<br>
+  <label>
+  <input type="radio" name="question_1" value="D">  You shouldn't drink fluids so close to a game
+  </label>
+  </div>
+  <div>
+     <button id="go1" type="button">Go</button>
+  </div>
+  </div>
+
+<!-- question 2 -->
+ <div class="qa" id='two'>
+ <p id= 'question_2'>How should you stay hydrated?</p>
+ <p class='response' id="response2"></p>
+<br>
+ <div class='options'>
+ <label>
+ <input type="radio" name="question_2" value="A">  Drink water when you are thirsty.
+ </label>
+<br>
+ <label>
+ <input type="radio" name="question_2" value="B">  Take a sip every 15-20 minutes.
+ </label>
+<br>
+ <label>
+ <input type="radio" name="question_2" value="C">  Drink half a gallon of water when you wake up.
+ </label>
+<br>
+ <label>
+ <input type="radio" name="question_2" value="D">  Drink 2-3 cups a day.
+ </label>
+ </div>
+ <div>
+    <button id="go2" type="button">Go</button>
+ </div>
+</div>
+
+<!-- question 3 -->
+ <div class="qa" id='three'>
+ <p id= 'question_3'>What drink provides a healthy alternative to water?</p>
+ <p class='response' id="response3"></p>
+ <div class='options'>
+ <label>
+ <input type="radio" name="question_3" value="A">  Sports drinks with a lot of sugar.
+ </label>
+<br>
+ <label>
+ <input type="radio" name="question_3" value="B">  Caffeine
+ </label>
+<br>
+ <label>
+ <input type="radio" name="question_3" value="C">  Energy drinks
+ </label>
+<br>
+ <label>
+ <input type="radio" name="question_3" value="D">  Sports drinks containing between 6-8% carbohydrates
+ </label>
+ </div>
+  <div>
+    <button id="go3" type="button">Go</button>
+  </div>
+</div>
+</form>
+
+<div>
+    <input type="button" id='next' value="Next" onlick="sum_values()">
+</div>
+
+<div class = "answer_response">
+<p id = "number_correct"></p>
+<p id = "message"></p>
+</div>
+
+<script src='http://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.js'></script>
+<script src='js/myjava.js' type="text/javascript"></script>
+</body>
+</html>
