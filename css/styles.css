@@ -1,0 +1,167 @@
+body, html {
+  min-height: 100%;
+  margin: 0 0 1rem 0;
+}
+
+body {
+  background-image:url(../images/football_field.jpg);
+  background-repeat: no-repeat;
+  background-size:cover;
+}
+
+.header {
+  margin: auto;
+  width: 40rem;
+  max-width: 100%
+}
+
+h1 {
+  text-align: center;
+  color: #000;
+  background-color: #D7D7D7;
+  font-family: 'Permanent Marker', cursive;
+  font-size: 3rem;
+}
+
+#console {
+  display: grid;
+  grid-template-columns: 1fr 5fr 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas:
+  "animations animations animations"
+  "... questions ...";
+}
+
+#animations {
+  grid-area: animations;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5rem;
+}
+
+.quest {
+  grid-area: questions;
+  border: solid;
+  border-color: red;
+  background-color: white;
+  padding: 1rem 5rem;
+}
+
+
+
+img {
+  max-width: 100%;
+  box-sizing: border-box;
+  margin: 5em;
+}
+
+img.user {
+      position: relative;
+      left: 10px;
+      top:50px;
+      margin:5px;
+    }
+
+img.ball-carrier {
+      position: relative;
+      right: 10px;
+      top:50px;
+      margin:5px;
+}
+
+@media screen and (max-width: 900px) {
+  img.user {
+        position: relative;
+        left: 10px;
+        top:50px;
+        margin:5px;
+        height: 200px;
+        width: 200px;
+      }
+
+  img.ball-carrier {
+        position: relative;
+        right: 10px;
+        top:50px;
+        margin:5px;
+        height: 200px;
+        width: 200px;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  img.user {
+        position: relative;
+        left: 10px;
+        top:50px;
+        margin:5px;
+        height: 150px;
+        width: 150px;
+      }
+
+  img.ball-carrier {
+        position: relative;
+        right: 10px;
+        top:50px;
+        margin:5px;
+        height: 150px;
+        width: 150px;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  img.user {
+        position: relative;
+        left: 10px;
+        top:50px;
+        margin:5px;
+        height: 125px;
+        width: 125px;
+      }
+
+  img.ball-carrier {
+        position: relative;
+        right: 10px;
+        top:50px;
+        margin:5px;
+        height: 125px;
+        width: 125px;
+}
+
+  .quest {
+    padding: 1rem 3rem;
+  }
+
+}
+
+@media screen and (max-width: 550px) {
+  img.user {
+        position: relative;
+        left: 10px;
+        top:50px;
+        margin:5px;
+        height: 100px;
+        width: 100px;
+      }
+
+  img.ball-carrier {
+        position: relative;
+        right: 10px;
+        top:50px;
+        margin:5px;
+        height: 100px;
+        width: 100px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  
+
+  .quest {
+  padding: .5rem;
+
+  }
+
+
+
+}

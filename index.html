@@ -5,101 +5,299 @@
     <link href="css/styles.css" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Version 1</title>
+    <link href="https://fonts.googleapis.com/css?family=Permanent+Marker&display=swap" rel="stylesheet">
   <!-- google fonts go here -->
   </head>
 <body>
 
-  <form id='quiz' name = 'quiz'>
-<!-- question 1 -->
-  <div class="qa" id='one'>
-  <p id= 'question_1'>How much water should an athlete try to consume 2 hours before the game?</p>
-  <p class='response' id="response1"></p>
-<br>
-  <div class='options'>
-  <label>
-  <input type="radio" name="question_1" value="A">  2-3 Cups
-  </label>
-<br>
-  <label>
-  <input type="radio" name="question_1" value="B">  1 Cup
-  </label>
-<br>
-  <label>
-  <input type="radio" name="question_1" value="C">  A gallon
-  </label>
-<br>
-  <label>
-  <input type="radio" name="question_1" value="D">  You shouldn't drink fluids so close to a game
-  </label>
-  </div>
-  <div>
-     <button id="go1" type="button">Go</button>
-  </div>
-  </div>
-
-<!-- question 2 -->
- <div class="qa" id='two'>
- <p id= 'question_2'>How should you stay hydrated?</p>
- <p class='response' id="response2"></p>
-<br>
- <div class='options'>
- <label>
- <input type="radio" name="question_2" value="A">  Drink water when you are thirsty.
- </label>
-<br>
- <label>
- <input type="radio" name="question_2" value="B">  Take a sip every 15-20 minutes.
- </label>
-<br>
- <label>
- <input type="radio" name="question_2" value="C">  Drink half a gallon of water when you wake up.
- </label>
-<br>
- <label>
- <input type="radio" name="question_2" value="D">  Drink 2-3 cups a day.
- </label>
- </div>
- <div>
-    <button id="go2" type="button">Go</button>
- </div>
+<div class="header">
+<h1>Make the Tackle!</h1>
 </div>
 
-<!-- question 3 -->
- <div class="qa" id='three'>
- <p id= 'question_3'>What drink provides a healthy alternative to water?</p>
- <p class='response' id="response3"></p>
- <div class='options'>
- <label>
- <input type="radio" name="question_3" value="A">  Sports drinks with a lot of sugar.
- </label>
-<br>
- <label>
- <input type="radio" name="question_3" value="B">  Caffeine
- </label>
-<br>
- <label>
- <input type="radio" name="question_3" value="C">  Energy drinks
- </label>
-<br>
- <label>
- <input type="radio" name="question_3" value="D">  Sports drinks containing between 6-8% carbohydrates
- </label>
- </div>
-  <div>
-    <button id="go3" type="button">Go</button>
-  </div>
-</div>
-</form>
+<article id="console">
+    <section id='animations'>
+        <img class="user" src="images/user.png" alt="user">
+        <img class="ball-carrier" src="images/ball_carrier.png" alt="ball carrier">
+    </section>
 
-<div>
-    <input type="button" id='next' value="Next" onlick="sum_values()">
-</div>
+    <section id="points">
+        <p id = "number_correct"></p>
+        <p id = "message"></p>
+    </section>
 
-<div class = "answer_response">
-<p id = "number_correct"></p>
-<p id = "message"></p>
-</div>
+    <section class="quest">
+        <form id='quiz' name = 'quiz'>
+        <!-- question 1 -->
+        <div class="qa" id='one'>
+            <p id= 'question_1'>How much water should an athlete try to consume 2 hours before the game?</p>
+            <p class='response' id="response1"></p>
+            <br>
+            <div class='options'>
+            <label>
+            <input type="radio" name="question_1" value="A">  2-3 Cups
+            </label>
+            <br>
+            <label>
+            <input type="radio" name="question_1" value="B">  1 Cup
+            </label>
+            <br>
+            <label>
+            <input type="radio" name="question_1" value="C">  A gallon
+            </label>
+            <br>
+            <label>
+            <input type="radio" name="question_1" value="D">  You shouldn't drink fluids so close to a game
+            </label>
+            </div>
+            <div>
+                <button id="go1" type="button">Go</button>
+            </div>
+        </div>
 
+        <!-- question 2 -->
+        <div class="qa" id='two'>
+            <p id= 'question_2'>How should you stay hydrated?</p>
+            <p class='response' id="response2"></p>
+            <br>
+            <div class='options'>
+            <label>
+            <input type="radio" name="question_2" value="A">  Drink water when you are thirsty.
+            </label>
+            <br>
+            <label>
+            <input type="radio" name="question_2" value="B">  Take a sip every 15-20 minutes.
+            </label>
+            <br>
+            <label>
+            <input type="radio" name="question_2" value="C">  Drink half a gallon of water when you wake up.
+            </label>
+            <br>
+            <label>
+            <input type="radio" name="question_2" value="D">  Drink 2-3 cups a day.
+            </label>
+            </div>
+            <div>
+                <button id="go2" type="button">Go</button>
+            </div>
+        </div>
+
+        <!-- question 3 -->
+        <div class="qa" id='three'>
+            <p id= 'question_3'>What drink provides a healthy alternative to water?</p>
+            <p class='response' id="response3"></p>
+            <div class='options'>
+            <label>
+            <input type="radio" name="question_3" value="A">  Sports drinks with a lot of sugar.
+            </label>
+            <br>
+            <label>
+            <input type="radio" name="question_3" value="B">  Caffeine
+            </label>
+            <br>
+            <label>
+            <input type="radio" name="question_3" value="C">  Energy drinks
+            </label>
+            <br>
+            <label>
+            <input type="radio" name="question_3" value="D">  Sports drinks containing between 6-8% carbohydrates
+            </label>
+            </div>
+            <div>
+                <button id="go3" type="button">Go</button>
+            </div>
+        </div>
+
+        <!-- question 4 -->
+        <div class="qa" id='four'>
+            <p id= 'question_4'>How many hours should you sleep per night?</p>
+            <p class='response' id="response4"></p>
+            <div class='options'>
+            <label>
+            <input type="radio" name="question_4" value="A">  It doesn't matter.
+            </label>
+            <br>
+            <label>
+            <input type="radio" name="question_4" value="B">  4-5 hours
+            </label>
+            <br>
+            <label>
+            <input type="radio" name="question_4" value="C">  6-8 hours
+            </label>
+            <br>
+            <label>
+            <input type="radio" name="question_4" value="D">  10-12 hours
+            </label>
+            </div>
+            <div>
+                <button id="go4" type="button">Go</button>
+            </div>
+        </div>
+
+        <!-- question 5 -->
+        <div class="qa" id='five'>
+            <p id= 'question_5'>What is TRUE about good sleep?</p>
+            <p class='response' id="response5"></p>
+            <div class='options'>
+            <label>
+            <input type="radio" name="question_5" value="A">  If you have a good sleep schedule during the weekdays, you don’t need to worry about the weekends.
+            </label>
+            <br>
+            <label>
+            <input type="radio" name="question_5" value="B">  You can always catch up on sleep.
+            </label>
+            <br>
+            <label>
+            <input type="radio" name="question_5" value="C">  Sex helps promote good sleep.
+            </label>
+            <br>
+            <label>
+            <input type="radio" name="question_5" value="D">  If you can’t fall asleep, watch a video on your phone.
+            </label>
+            </div>
+            <div>
+                <button id="go5" type="button">Go</button>
+            </div>
+        </div>
+
+        <!-- question 6 -->
+        <div class="qa" id='six'>
+            <p id= 'question_6'>How should you make the tackle?</p>
+            <p class='response' id="response6"></p>
+            <div class='options'>
+            <label>
+            <input type="radio" name="question_6" value="A">  With enough power, a strike with the shoulder will do the job.
+            </label>
+            <br>
+            <label>
+            <input type="radio" name="question_6" value="B">  Break down. Then, use your head as first point of contact and drive your hips. Keep your legs moving.
+            </label>
+            <br>
+            <label>
+            <input type="radio" name="question_6" value="C">  Launch yourself, leaving your feet. Make sure to wrap up.
+            </label>
+            <br>
+            <label>
+            <input type="radio" name="question_6" value="D">  Break down and use your front foot to lead your shoulder into tackle. Throw double uppercuts and grab cloth at back of jersey.
+            </label>
+            </div>
+            <div>
+                <button id="go6" type="button">Go</button>
+            </div>
+        </div>
+
+        <!-- question 7 -->
+        <div class="qa" id='seven'>
+            <p id= 'question_7'>What is Chronic Traumatic Encephalopathy (CTE)?</p>
+            <p class='response' id="response7"></p>
+            <div class='options'>
+            <label>
+            <input type="radio" name="question_7" value="A">  A brain disease
+            </label>
+            <br>
+            <label>
+            <input type="radio" name="question_7" value="B">  An illicit drug that boosts testosterone
+            </label>
+            <br>
+            <label>
+            <input type="radio" name="question_7" value="C">  A sports-induced traumatic stress disorder (PTSD)
+            </label>
+            <br>
+            <label>
+            <input type="radio" name="question_7" value="D">  A respiratory disease
+            </label>
+            </div>
+            <div>
+                <button id="go7" type="button">Go</button>
+            </div>
+        </div>
+
+        <!-- question 8 -->
+        <div class="qa" id='eight'>
+            <p id= 'question_8'>What causes CTE?</p>
+            <p class='response' id="response8"></p>
+            <div class='options'>
+            <label>
+            <input type="radio" name="question_8" value="A">  Lack of stretching
+            </label>
+            <br>
+            <label>
+            <input type="radio" name="question_8" value="B">  Illicit drugs
+            </label>
+            <br>
+            <label>
+            <input type="radio" name="question_8" value="C">  Repeated head trauma
+            </label>
+            <br>
+            <label>
+            <input type="radio" name="question_8" value="D">  Lack of strength and conditioning
+            </label>
+            </div>
+            <div>
+                <button id="go8" type="button">Go</button>
+            </div>
+        </div>
+
+        <!-- question 9 -->
+        <div class="qa" id='nine'>
+            <p id= 'question_9'>You’re in the open field against your opponent. Don’t let him evade you!</p>
+            <p class='response' id="response9"></p>
+            <div class='options'>
+            <label>
+            <input type="radio" name="question_9" value="A">  Break down and watch his hips.
+            </label>
+            <br>
+            <label>
+            <input type="radio" name="question_9" value="B">  Watch his head and shoulders when you go for the tackle.
+            </label>
+            <br>
+            <label>
+            <input type="radio" name="question_9" value="C">  Throw yourself to where he stands.
+            </label>
+            <br>
+            <label>
+            <input type="radio" name="question_9" value="D">  Use a projectile to stun him.
+            </label>
+            </div>
+            <div>
+                <button id="go9" type="button">Go</button>
+            </div>
+        </div>
+
+        <!-- question 10 -->
+        <div class="qa" id='ten'>
+            <p id= 'question_10'>What are some symptoms of CTE?</p>
+            <p class='response' id="response10"></p>
+            <div class='options'>
+            <label>
+            <input type="radio" name="question_10" value="A">  Paranoia, acne, rapid muscle/weight gain, enlarged breasts.
+            </label>
+            <br>
+            <label>
+            <input type="radio" name="question_10" value="B">  Memory loss, confusion, impaired judgment, and eventually progressive dementia.
+            </label>
+            <br>
+            <label>
+            <input type="radio" name="question_10" value="C">  Nightmares, unwanted memories, anxiety, heightened reactions.
+            </label>
+            <br>
+            <label>
+            <input type="radio" name="question_10" value="D">  Shortness of breath, chest tightness or pain, coughing, wheezing.
+            </label>
+            </div>
+            <div>
+                <button id="go10" type="button">Go</button>
+            </div>
+        </div>
+
+
+        </form>
+
+        <div>
+        <input type="button" id='next' value="Next">
+        </div>
+    </section>
+
+</article> <!-- console -->
 <script src='http://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.js'></script>
 <script src='js/myjava.js' type="text/javascript"></script>
 </body>
